@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <p>
+    © {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a>
+    {{ if .Site.Params.license }} – {{ .Site.Params.license }}{{ end }}
+  </p>
+</footer>
