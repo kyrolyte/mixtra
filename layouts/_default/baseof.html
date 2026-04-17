@@ -2,11 +2,9 @@
 <html lang="{{ .Site.Language.Lang | default "en" }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
   {{- partial "head.html" . -}}
   <body>
-    {{- partial "banner.html" . -}}
     {{- partial "navbar.html" . -}}
     {{- block "main" . }}{{ end -}}
     {{ partial "footer.html" . }}
-    {{ partial "scripts.html" . }}
   </body>
 </html>
 

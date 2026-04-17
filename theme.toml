@@ -1,0 +1,6 @@
+name = "Hextra"
+tags = ["Minimal"]
+features = ["Responsive", "Customization"]
+
+[author]
+  name = "kyrolyte"
