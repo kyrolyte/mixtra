@@ -1,30 +1,33 @@
 :root {
-  /* Colours */
-  --clr-primary: #2c3e50;      /* used for the navbar background */
-  --clr-bg: #f8f9fa;           /* body background */
-  --clr-text: #333;            /* body text */
-  --clr-link: #0066cc;         /* nav links */
-  --clr-link-hover: #0055aa;   /* nav link hover */
-
-  /* Spacing */
-  --sp: clamp(0.75rem, 1.5vw, 1.5rem);   /* fluid spacing */
+  --clr-primary: #2c3e50;
+  --clr-bg: #f8f9fa;
+  --clr-text: #333;
+  --clr-link: #0066cc;
+  --clr-link-hover: #0055aa;
+  --sp: clamp(0.75rem, 1.5vw, 1.5rem);
   --sp-lg: clamp(1rem, 2vw, 2rem);
-
-  /* Font‑size */
-  --fs-base: clamp(1rem, 2.5vw, 1.25rem);  /* fluid base font‑size */
+  --fs-base: clamp(1rem, 2.5vw, 1.25rem);
 }
-
-*, *::before, *::after { box-sizing: border-box; }
-html { font-size: var(--fs-base); }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+html { 
+  font-size: var(--fs-base);
+}
 body {
-  margin: 0; padding: 0; font-family: system-ui, sans-serif;
-  color: var(--clr-text); background: var(--clr-bg);
+  margin: 0; 
+  padding: 0; 
+  font-family: system-ui;
+  color: var(--clr-text); 
+  background: var(--clr-bg);
   line-height: 1.6;
 }
-
-main { padding: var(--sp); }
-h1, h2, h3, h4, h5, h6 { margin-top: 0; }
-
+main { 
+  padding: var(--sp); 
+}
+h1, h2, h3, h4, h5, h6 { 
+  margin-top: 0; 
+}
 .navbar {
   background: var(--clr-primary);
   color: #fff;
@@ -43,12 +46,10 @@ h1, h2, h3, h4, h5, h6 { margin-top: 0; }
   font-weight: 500;
   padding: 0.25rem 0;
 }
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover, .nav-link:focus {
   color: var(--clr-link-hover);
   text-decoration: underline;
 }
-
 .site-footer {
   background: #222;
   color: #ccc;
@@ -60,11 +61,9 @@ h1, h2, h3, h4, h5, h6 { margin-top: 0; }
   color: #fff;
   text-decoration: none;
 }
-.site-footer a:hover,
-.site-footer a:focus {
+.site-footer a:hover, .site-footer a:focus {
   text-decoration: underline;
 }
-
 ul {
   list-style: none;
   padding: 0;
@@ -82,10 +81,8 @@ li a {
   text-decoration: none;
 }
 li a:hover { background: #eaeaea; }
-
 article {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--sp);
 }
-

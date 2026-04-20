@@ -6,14 +6,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <title>
-    {{- if .IsHome -}}
-      {{ .Site.Title -}}
-    {{ else -}}
-      {{ with .Title }}{{ . }} – {{ end -}}
-      {{ .Site.Title -}}
-    {{ end -}}
-  </title>
+  <title>{{ partial "util-title.html" . }}</title>
   <meta name="description" content="{{ partial "util-description.html" . }}" />
+  {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 </head>
