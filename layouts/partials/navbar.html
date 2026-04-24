@@ -1,17 +1,9 @@
 <nav class="navbar">
   <ul class="nav-list">
-    {{- /* If a main menu is defined in config.toml, iterate over it. */ -}}
     {{- with .Site.Menus.main -}}
       {{- range . -}}
         <li class="nav-item">
           <a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a>
-        </li>
-      {{- end -}}
-    {{- else -}}
-      {{/* Fallback: show all top‑level sections (e.g. /blog, /docs) */}}
-      {{- range .Site.Sections -}}
-        <li class="nav-item">
-          <a href="{{ .RelPermalink }}" class="nav-link">{{ .Title }}</a>
         </li>
       {{- end -}}
     {{- end -}}

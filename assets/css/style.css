@@ -28,37 +28,30 @@ main {
 h1, h2, h3, h4, h5, h6 { 
   margin-top: 0; 
 }
-.navbar {
-  background: var(--clr-primary);
-  color: #fff;
-}
 .nav-list {
   display: flex;
   gap: var(--sp);
-  justify-content: center;
+  justify-content: right;
   list-style: none;
-  padding: var(--sp) 0;
+  padding: var(--sp);
   margin: 0;
 }
 .nav-link {
   color: var(--clr-link);
   text-decoration: none;
   font-weight: 500;
-  padding: 0.25rem 0;
+  padding: 0.125rem 0;
 }
 .nav-link:hover, .nav-link:focus {
   color: var(--clr-link-hover);
   text-decoration: underline;
 }
 .site-footer {
-  background: #222;
-  color: #ccc;
   text-align: center;
   font-size: 0.9rem;
   padding: var(--sp) 0;
 }
 .site-footer a {
-  color: #fff;
   text-decoration: none;
 }
 .site-footer a:hover, .site-footer a:focus {
@@ -74,13 +67,14 @@ ul {
 }
 li a {
   display: block;
-  background: #fff;
   padding: var(--sp);
   border-radius: 4px;
   color: var(--clr-text);
   text-decoration: none;
 }
-li a:hover { background: #eaeaea; }
+li a:hover { 
+  background: #eaeaea; 
+}
 article {
   max-width: 800px;
   margin: 0 auto;
