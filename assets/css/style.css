@@ -4,59 +4,71 @@
   --clr-text: #333;
   --clr-link: #0066cc;
   --clr-link-hover: #0055aa;
-  --sp: clamp(0.75rem, 1.5vw, 1.5rem);
-  --sp-lg: clamp(1rem, 2vw, 2rem);
-  --fs-base: clamp(1rem, 2.5vw, 1.25rem);
+  --sp: clamp(1rem, 2.5vw, 3.5rem);
+  --sp-lg: clamp(1.5rem, 3vw, 4rem);
+  --fs-base: clamp(1rem, 2.2vw, 1.35rem);
 }
-*, *::before, *::after { 
-  box-sizing: border-box; 
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-html { 
+
+html {
   font-size: var(--fs-base);
 }
+
 body {
-  margin: 0; 
-  padding: 0; 
-  font-family: system-ui;
-  color: var(--clr-text); 
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--clr-text);
   background: var(--clr-bg);
   line-height: 1.6;
 }
-main { 
-  padding: var(--sp); 
+
+main {
+  padding: var(--sp);
 }
-h1, h2, h3, h4, h5, h6 { 
-  margin-top: 0; 
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
 }
+
 .nav-list {
   display: flex;
   gap: var(--sp);
-  justify-content: right;
+  justify-content: flex-end;
   list-style: none;
   padding: var(--sp);
   margin: 0;
 }
+
 .nav-link {
   color: var(--clr-link);
   text-decoration: none;
   font-weight: 500;
   padding: 0.125rem 0;
 }
+
 .nav-link:hover, .nav-link:focus {
   color: var(--clr-link-hover);
   text-decoration: underline;
 }
+
 .site-footer {
   text-align: center;
   font-size: 0.9rem;
   padding: var(--sp) 0;
 }
+
 .site-footer a {
   text-decoration: none;
 }
+
 .site-footer a:hover, .site-footer a:focus {
   text-decoration: underline;
 }
+
 ul {
   list-style: none;
   padding: 0;
@@ -65,18 +77,23 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: var(--sp);
 }
+
 li a {
   display: block;
   padding: var(--sp);
   border-radius: 4px;
   color: var(--clr-text);
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
-li a:hover { 
-  background: #eaeaea; 
+
+li a:hover {
+  background: #eaeaea;
 }
+
 article {
-  max-width: 800px;
+  max-width: 70ch;
+  width: min(100%, 800px);
   margin: 0 auto;
   padding: var(--sp);
 }
