@@ -1,5 +1,6 @@
 {{ define "main" }}
   <article>
+    {{ if .Title }}<h1>{{ .Title }}</h1>{{ end }}
     <ul>
       {{ range .Pages.ByDate.Reverse }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
