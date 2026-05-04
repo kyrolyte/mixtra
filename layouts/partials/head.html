@@ -1,12 +1,28 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="index, follow" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<title>{{ partial "util-title.html" . }}</title>
-<meta name="description" content="{{ partial "util-description.html" . }}" />
+<title>
+{{- if .IsHome -}}
+  {{ .Site.Title -}}
+{{ else -}}
+  {{ with .Title }}{{ . }} – {{ end -}}
+  {{ .Site.Title -}}
+{{ end -}}
+</title>
+<meta name="description" content="
+{{ with .Description | plainify | htmlUnescape -}}
+  {{ . -}}
+{{ else -}}
+  {{ if .IsHome -}}
+    {{ with .Site.Params.description | plainify | htmlUnescape -}}
+      {{ . -}}
+    {{ end -}}
+  {{ else -}}
+    {{ .Summary | plainify | htmlUnescape | chomp -}}
+  {{ end -}}
+{{ end -}}
+" />
 {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="icon" href="./favicon.ico" sizes="any">
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
